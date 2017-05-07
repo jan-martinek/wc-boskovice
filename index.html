@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Je otevřeno WC na nádraží v Boskovicích?</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin-ext" rel="stylesheet">
+	
+	<style type="text/css">
+		/* blue #029FDA, dark #002964 */
+		body {
+			background: white;
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		
+		h1, p {
+			font-family: 'PT Sans', sans-serif;
+			color: #029FDA;
+		}
+		
+		p { font-size: 16pt; color: #002964}
+		
+		header {
+			margin: 0;
+			padding: 2rem;
+			background: #029FDA;
+		}
+		
+		header h1 {
+			color: white;
+			padding-left: 130px;
+		}
+		
+		header .symbol {
+			display: block;
+			float: left;
+			border: 2px solid white;
+			padding: 20px;
+			margin: 20px 20px 0 0;
+		}
+		
+		hr {
+			margin: 20px 0 50px;
+			border: 4px solid #029FDA;	
+		}
+		
+	</style>
+</head>
+<body>
+	<p id="date"></p> 
+
+	<header>
+		<h1 class="symbol">WC</h1>
+		<h1>Toalety na nádraží v&nbsp;Boskovicích jsou právě teď <span id="open"></span>.</h1>
+	</header>
+	
+	<p id="message"></p> 
+	
+	<hr>
+	
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript">
+		var openingHours = {
+			weekdays: [
+				420, 505,
+				515, 905,
+				935, 1005,
+				1015, 1205,
+				1225, 1405,
+				1420, 1705,
+				1715, 2155
+			],
+			sat: [
+				120, 140,
+				540, 605,
+				615, 905,
+				915, 1105,
+				1140, 1505,
+				1515, 2155
+			],
+			sun: [
+				120, 140,
+				540, 645,
+				650, 905,
+				915, 1210,
+				1240, 1420,
+				1440, 1820,
+				1830, 2155
+			]
+		}
+		
+		render(openingHours, new Date());
+	</script>
+	
+	<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fhippou%2Fposts%2F10155308328197803&width=500" width="100%" height="800" style="border:none;overflow:hidden; margin: 0 auto;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</body>
+</html>
