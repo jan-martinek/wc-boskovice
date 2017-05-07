@@ -42,7 +42,7 @@ var renderMessage = function(opened, nextChange, mins) {
 			message = 'Pokud nejste daleko, nemusíte spěchat. Otevřeno bude ještě ' + mins + ' minut (do ' + time + ').'
 		}
 	} else {
-		if (mins === null) {
+		if (nextChange === null) {
 			message = 'Pozor! Znovu bude otevřeno až zítra!';
 		} else if (mins < 10) {
 			message = 'Ale dondite, otevřeno bude už za ' + mins + ' minut (od ' + time + ')!';
