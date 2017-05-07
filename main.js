@@ -24,7 +24,7 @@ var render = function(openingHours, date) {
 	var dayNames = ['neděle', 'pondělí', 'úterý', 'středa', 'čtvrtek', 'pátek', 'sobota'];
 	var monthNames = ['ledna', 'února', 'března', 'dubna', ' května', 'června', 'července', 'srpna', 'září', 'října', 'listopadu', 'prosince'];
 	var dayTimes = ['v noci', 'v noci', 'v noci', 'v noci', 'ráno', 'ráno', 'ráno', 'ráno', 'dopoledne', 'dopoledne', 'dopoledne', 'dopoledne', 'odpoledne', 'odpoledne', 'odpoledne', 'odpoledne', 'odpoledne', 'odpoledne', 'odpoledne', 'odpoledne', 'večer', 'večer', 'večer', 'večer'];
-	document.getElementById('date').innerHTML = 'Je ' + dayNames[date.getDay()] + ' ' + date.getDate() + '. ' + monthNames[date.getMonth()] + ', přesně ' + date.getHours() + ':' + date.getMinutes() + ' ' + dayTimes[date.getHours()] + '.';
+	document.getElementById('date').innerHTML = 'Je ' + dayNames[date.getDay()] + ' ' + date.getDate() + '. ' + monthNames[date.getMonth()] + ', přesně ' + date.getHours() + ':' + String(date.getMinutes()).padStart(2, '0') + ' ' + dayTimes[date.getHours()] + '.';
 	
 	
 	
